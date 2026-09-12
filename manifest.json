@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "RageSlayer AI Homie",
+  "version": "1.0",
+  "description": "An AI sidekick that helps you physically destroy annoying websites.",
+  "permissions": ["activeTab"],
+  "host_permissions": [
+    "https://api.groq.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
